@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+Exercícios de interpretação de código
+/* 1
+const bool1 = true
+const bool2 = false
+const bool3 = !bool2
+
+let resultado = bool1 && bool2
+console.log("a. ", resultado)
+R: false
+
+resultado = bool1 && bool2 && bool3 
+console.log("b. ", resultado) 
+R: false
+
+resultado = !resultado && (bool1 || bool2) 
+console.log("c. ", resultado)
+R: true
+
+console.log("d. ", typeof resultado)
+R: Boolean
+
+*/
+
+/* 2
+let primeiroNumero = prompt("Digite um numero!")
+let segundoNumero = prompt("Digite outro numero!")
+
+const soma = primeiroNumero + segundoNumero
+
+console.log(soma) 
+Será impresso o valor digitado do primeiro + valor digitado no segundo.
+*/
+
+/* 3 Para correção, coloque a função number
+const soma = number (primeiroNumero) + segundoNumero
+*/
+
+Exercícios de escrita de código
+1. 
+const Idade = prompt("Digite sua idade !")
+const IdadeAmigo = prompt ("Qual a idade do(a) melhor amigo (a)" )
+console.log ("Sua idade é maior do que a do seu melhor amigo?", Idade >= IdadeAmigo)
+let diferenca = Idade - IdadeAmigo
+console.log ("A diferença de idade é", diferenca)
+
+2.
+let NumbPar = prompt ("Fala brother, digite um numero par !")
+console.log(NumbPar % 2) 
+// Todo resultado será 0, pois não haverá resto.
+// Se digitar um número ímpar, o valor será 1, pois dividiu por 2 e sobrou 1.
+
+3.
+let Idade = prompt("Olá de novo, Digite sua idade !")
+let IdadeMeses = Idade * 12
+console.log("Sua Idade em meses é", IdadeMeses)
+let IdadeDias = IdadeMeses * 30
+//Aproximação de cada mês possuir 30 dias
+console.log("Sua Idade aproximada em dias é", IdadeDias)
+let IdadeHoras = IdadeDias * 24 
+console.log("Sua idade em horas é", IdadeHoras)
+
+4.
+let Num1 = prompt("Digite o primeiro numero!")
+let Num2 = prompt("Digite o segundo numero!")
+console.log ("O primeiro numero é maior que segundo?", Num1 !== Num2)
+console.log ("O primeiro numero é igual ao segundo?", Num1 === Num2)
+
+
