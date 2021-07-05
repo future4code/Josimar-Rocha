@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"
 import styled from 'styled-components';
 
-
+/*
 const Home = (props) => {
 
     const [profile, setProfile] = useState({})
@@ -67,3 +67,5 @@ const Home = (props) => {
 }
 
 export default Home;
+
+*/
