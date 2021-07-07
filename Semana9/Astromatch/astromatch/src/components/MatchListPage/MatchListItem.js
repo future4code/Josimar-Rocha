@@ -15,17 +15,21 @@ const ListItemContainer = styled.div `
 const Avatar = styled.img`
     border-radius: 50%;
     margin-right: 8px;
+    height: 30px;
+    width: 30px;
 `
 
 
 
-function MatchItemPage() {
+function MatchListItem(props) {
+    const profile = props.profile
     return(
     <ListItemContainer>
-        <Avatar src={''}/>
-        <p>Nome </p>
+        <Avatar src={profile.photo}/>
+        <p>{profile.name} </p>
+        <hr/>
     </ListItemContainer>
     )
 }
 
-export default MatchItemPage
+export default MatchListItem

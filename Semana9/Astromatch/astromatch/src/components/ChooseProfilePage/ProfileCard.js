@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 const ProfileCardContainer = styled.div`
     margin: 16px;
-    width: 100%;
 `
 
 const ProfilePicture = styled.img`
     width: 100%;
     display: block;
+    max-height: 350px;
+    
 `
 
 const ProfileInfo = styled.div`

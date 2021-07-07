@@ -16,12 +16,33 @@ const MainContainer = styled.div`
 `
 
 
-function Main(){
+function Main() {
+    const [selectedPage, setSelectedPage] = useState('choose-profile')
+
+    const renderSelectedPage = () => {
+        switch(selectedPage) {
+            case 'choose-profile':
+                return <ChooseProfilePage/>
+            case 'match-list':
+                return <MatchListPage/>
+            default:
+                return <ChooseProfilePage/>
+        }
+    }
+
+    const goToChooseProfilePage = () => {
+        setSelectedPage('choose-Profile')
+    }
+
+    const goToMatchListPage = () => {
+        setSelectedPage('match-list')
+    }
+
+    
     return(
     <MainContainer>
-        <AppBar/>
-        <ChooseProfilePage/>
-        {/*<MatchListPage/>*/}
+        <AppBar goToChooseProfilePage={goToChooseProfilePage} goToMatchListPage={goToMatchListPage} />
+        {renderSelectedPage()}
     </MainContainer>
     )
 }

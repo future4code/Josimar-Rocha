@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MatchListItem from './MatchListItem';
 import styled from 'styled-components';
+import axios from 'axios';
 
 
 const ListContainer = styled.div`
@@ -10,12 +11,19 @@ const ListContainer = styled.div`
 
 
 function MatchListPage() {
+    const [matches, setMatches] = useState([])
+
+    useEffect( () => {
+        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:josimar/matches').then(response =>{
+            setMatches(response.data.matches) 
+        })
+    }, []);
+
     return(
         <ListContainer>
-            <MatchListItem/>
-            <MatchListItem/>
-            <MatchListItem/>
-            <MatchListItem/>
+            {matches.map((profile) => {
+                return <MatchListItem profile={profile}/>
+            })}
         </ListContainer>
     )
 }
